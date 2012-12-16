@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="lib/style.css" type="text/css" />
+<title>netAction Transcript</title>
+<script id="lineTemplate" type="text/x-jQuery-tmpl">
+	<dt>${formatTime(time)}</dt>
+	<dd><p class="text" spellcheck="true" contenteditable="true">${text}</p>
+		<span class="delete">♲</span>
+	</dd>
+</script>
+
+<script id="exportTemplate" type="text/x-jQuery-tmpl">
+	<h1>transcript.</h1>
+	{{each lines}}
+		<p title="${time}">${text}</p>
+	{{/each}}
+</script>
+
+<script id="introductionTemplate" type="text/x-jQuery-tmpl">
+* Load video file.
+* Write the transcript. Press enter for new line.
+* Export and save HTML.
+* Load exported transcripts later.
+</script>
+
+
+<script src="lib/jquery-1.8.3.min.js"></script>
+<script src="lib/jquery.tmpl.min.js"></script>
+<script src="lib/script.js"></script>
+</head>
+<body>
+<div id="media">
+	<video src="lib/Osmani_Ventura_320.webm" controls="controls"></video>
+	<button id="speed" title="speed does not work in all browsers">1</button>
+	<button id="play">▶</button>
+	<button id="prevSec">←</button>
+</div>
+
+<div id="transcript">
+	<dl>
+	</dl>
+</div>
+
+<div id="footer">
+	<div id="footerToggle">
+		⇓
+	</div>
+
+<span style="position:absolute;width:0px;overflow:hidden;"><input type="file" id="videoInput" accept="video/*" /><input type="file" id="htmlInput" accept="text/html" /></span>
+
+	<label for="fileInput" id="importLabel">Import: <button id="videoInputButton">Video</button></label><button id="htmlInputButton">Transcript</button>
+	<label for="exportHtml" id="exportLabel">Export: </label><button id="exportHtml">Transcript</button>
+</div><!-- footer -->
+
+</body>
+</html>

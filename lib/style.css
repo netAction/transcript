@@ -1,0 +1,130 @@
+body,html {
+	margin:0;
+	padding:0;
+	background-color:#aaa;
+}
+
+#media {
+	position:fixed;
+	resize: vertical;
+	overflow:hidden;
+	top:0;
+	left:0;
+	width:100%;
+	height:11.5em;
+	background-color:#444;
+	padding:0.5em 0;
+}
+#media #prevSec, #media #play, #media #speed {
+	position:absolute;
+	height:1.8em;
+	width:2em;
+	left:0;
+	cursor:pointer;
+	font-size:1.3em;
+}
+#media #prevSec {
+	bottom:2.7em;
+}
+#media #play {
+	bottom:4.7em;
+}
+#media #speed {
+	bottom:6.7em;
+}
+
+#media video {
+	height:100%;
+	width:100%;
+}
+
+#transcript {
+	margin:0 auto 7em auto;
+	max-width:50em;
+}
+#transcript dl {
+	margin:0;
+	padding:0;
+}
+#transcript dt {
+	text-align:right;
+	font-family:monospace;
+	margin:0;
+	padding:0.2em 0.5em 0.2em 0;
+	width:4em;
+	display:block;
+	float:left;
+	background-color:#eee;
+	cursor:pointer;
+}
+#transcript dt:hover {
+	background-color:white;
+}
+#transcript dd {
+	margin:0 1em 1.6em 5em;
+	padding:0;
+	display:block;
+}
+#transcript dd .text {
+	margin:0;
+	padding:0.3em 0.5em;
+	background-color:#eee;
+	min-height:1.6em;
+	line-height:1.6em;
+}
+#transcript dd .text:focus,#transcript dd .text:hover{
+	background-color:white;
+}
+#transcript dd span.delete {
+	color:#333;
+	float:right;
+	font-size:1em;
+	cursor:pointer;
+	padding:0 0.3em;
+	border-radius: 0 0 1em 1em;
+}
+#transcript dd span.delete:hover {
+	background-color:white;
+}
+
+
+
+#footer {
+	position:fixed;
+	left:0;
+	bottom:0;
+	width:100%;
+	background-color:#444;
+	color:#eee;
+}
+#footer #importLabel {
+	margin:2em 0 2em 6em;
+}
+#footer #exportLabel {
+	margin:2em 0 2em 2em;
+}
+
+#footer #videoInputButton {
+	margin:2em 0 2em 0.5em;
+	cursor:pointer;
+}
+#footer #exportHtml, #footer #exportJs{
+	cursor:pointer;
+	margin:2em 0 2em 0em;
+}
+#footerToggle {
+	font-size:1.7em;
+	width:1em;
+	cursor:pointer;
+	border-radius:0 1.5em 0 0;
+	padding:0.3em 0.7em 0.2em 0.4em;
+	background-color:#444;
+	color:#eee;
+	position:absolute;
+	left:0;
+	top:-1.6em;
+}
+#footerToggle:hover {
+	background-color:white;
+	color:#333;
+}
